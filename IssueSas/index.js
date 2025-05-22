@@ -1,0 +1,1 @@
+```js const { BlobServiceClient, StorageSharedKeyCredential, generateBlobSASQueryParameters, BlobSASPermissions } = require("@azure/storage-blob"); module.exports = async function (context, req) { const file = req.query.name
