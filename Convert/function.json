@@ -1,11 +1,34 @@
 {
   "bindings": [
     {
+      "authLevel": "anonymous",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "methods": ["post", "get"],
+      "route": "convert"
+    },
+    {
+      "name": "blob",
       "type": "blobTrigger",
       "direction": "in",
-      "name": "blob",
       "path": "uploads/{name}",
+      "connection": "AzureWebJobsStorage",
+      "dataType": "binary"
+    },
+    {
+      "type": "blob",
+      "direction": "out",
+      "name": "outputBlob",
+      "path": "converted/{name}.{format}",
       "connection": "AzureWebJobsStorage"
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
     }
-  ]
-} 
+  ],
+  "scriptFile": "../dist/Convert/index.js",
+  "disabled": false
+}
