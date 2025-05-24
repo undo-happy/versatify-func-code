@@ -14,6 +14,13 @@ jobs:
         node-version: 18
     - run: npm ci
     - run: zip -r func.zip .
+    
+    # Azure 로그인 추가
+    - name: Azure Login
+      uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+        
     - name: Deploy to Azure Functions
       uses: Azure/functions-action@v1
       with:
