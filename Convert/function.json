@@ -1,0 +1,11 @@
+{
+  "bindings": [
+    {
+      "type": "blobTrigger",
+      "direction": "in",
+      "name": "blob",
+      "path": "uploads/{name}",
+      "connection": "AzureWebJobsStorage"
+    }
+  ]
+} 
