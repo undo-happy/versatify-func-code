@@ -8,16 +8,16 @@
     "build": "echo \"No build step required\""
   },
   "dependencies": {
-    "@azure/storage-blob": "^12.18.0",
-    "@aws-sdk/client-s3": "^3.534.0",
-    "@aws-sdk/s3-request-presigner": "^3.534.0",
-    "uuid": "^9.0.0",
-    "mime-types": "^2.1.35",
-    "file-type": "^18.0.0",
-    "formidable": "^3.5.1"
+    "@azure/storage-blob": "12.18.0",
+    "@aws-sdk/client-s3": "3.534.0",
+    "@aws-sdk/s3-request-presigner": "3.534.0",
+    "uuid": "9.0.0",
+    "mime-types": "2.1.35",
+    "file-type": "18.0.0",
+    "formidable": "3.5.1"
   },
   "devDependencies": {
-    "@azure/functions": "^4.8.2",
+    "@azure/functions": "4.3.5",
     "jest": "^29.5.0"
   }
 }
